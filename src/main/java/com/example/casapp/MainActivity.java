@@ -19,8 +19,6 @@ public class MainActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent openFocos = new Intent(getApplicationContext(),Salas.class);
-                //Intent openRegister = new Intent(getApplicationContext(),Register.class);
                 Intent openAdmin = new Intent(getApplicationContext(),Admin.class);
                 finish();
                 startActivity(openAdmin);
