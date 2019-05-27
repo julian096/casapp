@@ -75,7 +75,6 @@ public class Register extends AppCompatActivity {
                         //llamada a funcion para insersion de datos
                         saveUser(userName.getText().toString(),password.getText().toString(),Datos);
 
-                        //Toast.makeText(getApplicationContext(),Datos,Toast.LENGTH_SHORT).show();
                     }else{
                         Toast.makeText(getApplicationContext(),"Porfavor rellene todos los campos",Toast.LENGTH_SHORT).show();
                     }
@@ -90,9 +89,7 @@ public class Register extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent cambioAdmin = new Intent(getApplicationContext(),Admin.class);
-                finish();
-                startActivity(cambioAdmin);
+                onBackPressed();
             }
         });
 
@@ -111,7 +108,6 @@ public class Register extends AppCompatActivity {
         dataUser.put("username", name);
         dataUser.put("password", pass);
         dataUser.put("spotlights", focos);
-        final String requestData = dataUser.toString();
 
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, dataUser, new Response.Listener<JSONObject>() {
             @Override

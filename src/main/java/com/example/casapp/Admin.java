@@ -92,7 +92,6 @@ public class Admin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent cambioRegistro = new Intent(getApplicationContext(),Register.class);
-                finish();
                 startActivity(cambioRegistro);
             }
         });
