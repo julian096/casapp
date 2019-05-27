@@ -36,10 +36,12 @@ public class User extends AppCompatActivity {
         setContentView(R.layout.activity_user);
         initElem();
 
+        //Por defecto todos los focos son invisibles
         focoCocina.setVisibility(View.INVISIBLE);
         focoSala.setVisibility(View.INVISIBLE);
         focoBaño.setVisibility(View.INVISIBLE);
         focoCuarto.setVisibility(View.INVISIBLE);
+        
         Intent in = getIntent();
         Bundle b = in.getExtras();
         String name = b.getString("user");
@@ -47,12 +49,11 @@ public class User extends AppCompatActivity {
         String arraySpotlights[] = spotlights.split(",");
         etiUser.setText(name);
 
-        Toast.makeText(getApplicationContext(),spotlights,Toast.LENGTH_SHORT).show();
-
+        //compara y visualiza solo los focos del usuario
         for(int i=0; i<arraySpotlights.length; i++){
             if(arraySpotlights[i].equals("kitchen")){
                 if(!arraySpotlights[i+1].equals("off")){
-                    Ucuarto.setImageResource(R.drawable.focoon);
+                    Ucocina.setImageResource(R.drawable.focoon);
                 }
                 focoCocina.setVisibility(View.VISIBLE);
             }
@@ -143,7 +144,8 @@ public class User extends AppCompatActivity {
                 Ucocina.setImageResource(R.drawable.focooff);
                 //metodo status off
             }
-        }else if(view.getId()==Usala.getId()){
+        }
+        if(view.getId()==Usala.getId()){
             if(Usala.getDrawable().getConstantState().equals(getResources().getDrawable(R.drawable.focooff).getConstantState())){
                 changeStatusFoco("living_room","on");
                 Usala.setImageResource(R.drawable.focoon);
@@ -153,7 +155,8 @@ public class User extends AppCompatActivity {
                 Usala.setImageResource(R.drawable.focooff);
                 //metodo status off
             }
-        }else if(view.getId()==Ubaño.getId()){
+        }
+        if(view.getId()==Ubaño.getId()){
             if(Ubaño.getDrawable().getConstantState().equals(getResources().getDrawable(R.drawable.focooff).getConstantState())){
                 changeStatusFoco("bathroom","on");
                 Ubaño.setImageResource(R.drawable.focoon);
@@ -163,7 +166,8 @@ public class User extends AppCompatActivity {
                 Ubaño.setImageResource(R.drawable.focooff);
                 //metodo status off
             }
-        }else if(view.getId()==Ucuarto.getId()){
+        }
+        if(view.getId()==Ucuarto.getId()){
             if(Ucuarto.getDrawable().getConstantState().equals(getResources().getDrawable(R.drawable.focooff).getConstantState())){
                 changeStatusFoco("bedroom","on");
                 Ucuarto.setImageResource(R.drawable.focoon);

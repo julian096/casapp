@@ -45,23 +45,23 @@ public class Admin extends AppCompatActivity {
         AfocoSala.setVisibility(View.INVISIBLE);
         AfocoBaño.setVisibility(View.INVISIBLE);
         AfocoCuarto.setVisibility(View.INVISIBLE);
+
+        //aqui obtengo los datos que pase con el intent
         Intent inte = getIntent();
         Bundle b = inte.getExtras();
         String spotlights = b.getString("spotlights");
         String arraySpotlights[] = spotlights.split(",");
 
-        Toast.makeText(getApplicationContext(),spotlights,Toast.LENGTH_SHORT).show();
-
         for(int i=0; i<arraySpotlights.length; i++){
             if(arraySpotlights[i].equals("kitchen")){
                 if(!arraySpotlights[i+1].equals("off")){
-                    Abaño.setImageResource(R.drawable.focoon);
+                    Acocina.setImageResource(R.drawable.focoon);
                 }
                 AfocoCocina.setVisibility(View.VISIBLE);
             }
             if(arraySpotlights[i].equals("living_room")){
                 if(!arraySpotlights[i+1].equals("off")){
-                    Abaño.setImageResource(R.drawable.focoon);
+                    Asala.setImageResource(R.drawable.focoon);
                 }
                 AfocoSala.setVisibility(View.VISIBLE);
             }
@@ -73,7 +73,7 @@ public class Admin extends AppCompatActivity {
             }
             if(arraySpotlights[i].equals("bedroom")){
                 if(!arraySpotlights[i+1].equals("off")){
-                    Abaño.setImageResource(R.drawable.focoon);
+                    Acuarto.setImageResource(R.drawable.focoon);
                 }
                 AfocoCuarto.setVisibility(View.VISIBLE);
             }
@@ -146,41 +146,36 @@ public class Admin extends AppCompatActivity {
             if(Acocina.getDrawable().getConstantState().equals(getResources().getDrawable(R.drawable.focooff).getConstantState())){
                 changeStatus("kitchen","on");
                 Acocina.setImageResource(R.drawable.focoon);
-                //metodo status on
             }else{
                 changeStatus("kitchen","off");
                 Acocina.setImageResource(R.drawable.focooff);
-                //metodo status off
             }
-        }else if(view.getId()==Asala.getId()){
+        }
+        if(view.getId()==Asala.getId()){
             if(Asala.getDrawable().getConstantState().equals(getResources().getDrawable(R.drawable.focooff).getConstantState())){
                 changeStatus("living_room","on");
                 Asala.setImageResource(R.drawable.focoon);
-                //metodo status on
             }else{
                 changeStatus("living_room","off");
                 Asala.setImageResource(R.drawable.focooff);
-                //metodo status off
             }
-        }else if(view.getId()==Abaño.getId()){
+        }
+        if(view.getId()==Abaño.getId()){
             if(Abaño.getDrawable().getConstantState().equals(getResources().getDrawable(R.drawable.focooff).getConstantState())){
                 changeStatus("bathroom","on");
                 Abaño.setImageResource(R.drawable.focoon);
-                //metodo status on
             }else{
                 changeStatus("bathroom","off");
                 Abaño.setImageResource(R.drawable.focooff);
-                //metodo status off
             }
-        }else if(view.getId()==Acuarto.getId()){
+        }
+        if(view.getId()==Acuarto.getId()){
             if(Acuarto.getDrawable().getConstantState().equals(getResources().getDrawable(R.drawable.focooff).getConstantState())){
                 changeStatus("bedroom","on");
                 Acuarto.setImageResource(R.drawable.focoon);
-                //metodo status on
             }else{
                 changeStatus("bedroom","off");
                 Acuarto.setImageResource(R.drawable.focooff);
-                //metodo status off
             }
         }
     }
