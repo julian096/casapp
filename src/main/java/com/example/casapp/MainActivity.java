@@ -68,9 +68,9 @@ public class MainActivity extends AppCompatActivity{
                 try {
                     String name = response.getString("message");
                     String salas = response.getString("spotlightsAndStatus");
-                    //Toast.makeText(getApplicationContext(),salas,Toast.LENGTH_SHORT).show();
                     if(name.equals("admin")){
                         Intent changeAdmin = new Intent(getApplicationContext(),Admin.class);
+                        changeAdmin.putExtra("spotlights", salas);
                         finish();
                         startActivity(changeAdmin);
                     }else{

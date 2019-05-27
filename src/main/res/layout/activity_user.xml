@@ -30,15 +30,112 @@
             android:layout_marginTop="130dp"
             android:text="Usuario x" />
 
-        <TableLayout
-            android:id="@+id/tabla"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:stretchColumns="*"
-            android:shrinkColumns="*">
+            android:layout_height="wrap_content">
 
+            <LinearLayout
+                android:id="@+id/focoCocina"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:orientation="vertical">
 
-        </TableLayout>
+                <ImageButton
+                    android:id="@+id/Ucocina"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/focooff"
+                    android:onClick="enviar"
+                    style="?android:attr/borderlessButtonStyle"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="45dp"
+                    android:text="Cocina"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/focoSala"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/Usala"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/focooff"
+                    android:onClick="enviar"
+                    style="?android:attr/borderlessButtonStyle"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="55dp"
+                    android:text="Sala"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/focoBaño"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/Ubaño"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/focooff"
+                    android:onClick="enviar"
+                    style="?android:attr/borderlessButtonStyle"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="55dp"
+                    android:text="Baño"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/focoCuarto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/Ucuarto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/focooff"
+                    android:onClick="enviar"
+                    style="?android:attr/borderlessButtonStyle"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="45dp"
+                    android:text="Cuarto"/>
+
+            </LinearLayout>
+        </LinearLayout>
 
         <Button
             android:id="@+id/logoutUser"
@@ -46,6 +143,7 @@
             android:layout_height="wrap_content"
             android:text="Cerrar sesion"
             android:layout_gravity="center"
+            android:layout_marginTop="15dp"
             android:textColor="@android:color/holo_red_dark"
             style="?android:attr/borderlessButtonStyle"/>
     </LinearLayout>

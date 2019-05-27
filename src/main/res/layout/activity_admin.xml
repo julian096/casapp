@@ -37,47 +37,55 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginLeft="25dp">
 
-            <ImageButton
-                android:id="@+id/Acocina"
-                android:layout_width="wrap_content"
-                style="?android:attr/borderlessButtonStyle"
-                android:layout_marginLeft="50dp"
-                android:onClick="enviar"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/focooff" />
-
-            <ImageButton
-                android:id="@+id/Asala"
-                android:layout_width="wrap_content"
-                style="?android:attr/borderlessButtonStyle"
-                android:layout_marginLeft="50dp"
-                android:onClick="enviar"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/focooff" />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
+            <LinearLayout
+                android:id="@+id/AfocoCocina"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="95dp"
-                android:text="Cocina"
-                android:textSize="20dp"/>
+                android:layout_marginLeft="30dp"
+                android:orientation="vertical">
 
-            <TextView
+                <ImageButton
+                    android:id="@+id/Acocina"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/focooff"
+                    android:onClick="enviar"
+                    style="?android:attr/borderlessButtonStyle"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="45dp"
+                    android:text="Cocina"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/AfocoSala"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="150dp"
-                android:text="Sala"
-                android:textSize="20dp"/>
+                android:layout_marginLeft="30dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/Asala"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/focooff"
+                    android:onClick="enviar"
+                    style="?android:attr/borderlessButtonStyle"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="55dp"
+                    android:text="Sala"/>
+
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -98,49 +106,57 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/AfocoBaño"
+            android:layout_marginLeft="25dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content">
 
-            <ImageButton
-                android:id="@+id/Abaño"
-                android:layout_width="wrap_content"
-                style="?android:attr/borderlessButtonStyle"
-                android:layout_marginLeft="50dp"
-                android:onClick="enviar"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/focooff" />
-
-            <ImageButton
-                android:id="@+id/Acuarto"
-                android:layout_width="wrap_content"
-                style="?android:attr/borderlessButtonStyle"
-                android:layout_marginLeft="50dp"
-                android:onClick="enviar"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/focooff" />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="105dp"
-                android:text="Baño"
-                android:textSize="20dp"/>
+                android:layout_marginLeft="30dp"
+                android:orientation="vertical">
 
-            <TextView
+                <ImageButton
+                    android:id="@+id/Abaño"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/focooff"
+                    android:onClick="enviar"
+                    style="?android:attr/borderlessButtonStyle"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="55dp"
+                    android:text="Baño"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/AfocoCuarto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="150dp"
-                android:text="Cuarto"
-                android:textSize="20dp"/>
+                android:layout_marginLeft="30dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/Acuarto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/focooff"
+                    android:onClick="enviar"
+                    style="?android:attr/borderlessButtonStyle"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="45dp"
+                    android:text="Cuarto"/>
+
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
