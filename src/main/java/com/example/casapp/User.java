@@ -41,7 +41,7 @@ public class User extends AppCompatActivity {
         focoSala.setVisibility(View.INVISIBLE);
         focoBaño.setVisibility(View.INVISIBLE);
         focoCuarto.setVisibility(View.INVISIBLE);
-        
+
         Intent in = getIntent();
         Bundle b = in.getExtras();
         String name = b.getString("user");

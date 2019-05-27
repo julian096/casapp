@@ -27,6 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="120dp"
             android:text="CasApp"
+            android:textColor="@android:color/black"
             android:textAlignment="center"
             android:textSize="35dp" />
 
@@ -36,6 +37,7 @@
             android:text="Inicio de sesion"
             android:layout_gravity="center"
             android:textSize="20dp"
+            android:textColor="@android:color/black"
             android:layout_marginTop="70dp"/>
 
         <EditText

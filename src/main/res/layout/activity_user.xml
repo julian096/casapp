@@ -27,7 +27,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textSize="20dp"
-            android:layout_marginTop="130dp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="110dp"
+            android:layout_marginBottom="20dp"
             android:text="Usuario x" />
 
         <LinearLayout
@@ -53,6 +55,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
+                    android:textColor="@android:color/black"
                     android:layout_marginLeft="45dp"
                     android:text="Cocina"/>
 
@@ -77,6 +80,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
+                    android:textColor="@android:color/black"
                     android:layout_marginLeft="55dp"
                     android:text="Sala"/>
 
@@ -107,6 +111,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
+                    android:textColor="@android:color/black"
                     android:layout_marginLeft="55dp"
                     android:text="Baño"/>
 
@@ -131,6 +136,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
+                    android:textColor="@android:color/black"
                     android:layout_marginLeft="45dp"
                     android:text="Cuarto"/>
 
